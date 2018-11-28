@@ -5,6 +5,19 @@
     overflow: scroll;
 }
 
+.lyrics-text {
+    line-height: 20px;
+}
+
+.quit {
+    right: 5px;
+    top: 0;
+    position: absolute;
+}
+
+.quit:hover {
+    text-decoration: underline;
+}
 
 a:active,
 a:hover {
@@ -535,6 +548,9 @@ position: relative;
 overflow-y: auto;
 flex: 1;
 border-left: 1px solid #ddd;
+}
+.pane-content {
+    padding: 10px 20px;
 }
 .pane:first-child {
 border-left: 0;
