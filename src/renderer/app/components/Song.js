@@ -8,8 +8,10 @@ const getLabel = (song, state) => {
             return 'Loading...';
         case STATES.LOADED:
             return <strong>{song}</strong>;
-        case STATES.NOTING_FOUND:
         case STATES.ERROR:
+            return <strong>Spotify isn't running</strong>
+        case STATES.NOTING_FOUND:
+        
             return 'something went wrong...'
         case STATES.EMPTY_STATE:
             return (
@@ -28,7 +30,7 @@ const getLabel = (song, state) => {
 const Song = ({song, state}) => {
 
     return (
-        <p>
+        <p className='padded-bottom'>
             {
                 getLabel(song, state)
             }

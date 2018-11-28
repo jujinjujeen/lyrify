@@ -9,7 +9,7 @@ const getText = (lyrics, state) => {
             return lyrics
                     .split('\n')
                     .map((item, index) => (
-                    <p key={item+index}>{item}</p>
+                        <p className='lyrics-text' key={item+index}>{item}</p>
                     ));
         case STATES.NOTING_FOUND:
             return 'Couldn\'t find your song lyrics'
