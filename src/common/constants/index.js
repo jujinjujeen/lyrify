@@ -6,4 +6,4 @@ export const STATES = {
     EMPTY: 'empty'
 }
 
-export const API_KEY = 'WSbiFSt9vKqVQxRJAQq3nRYCIVr5GH9lyvHx1ghh3dqe1oPg7q9QX3ErwlyFc8JR';
+epoxrt const APP_NAME = 'Lyrify';

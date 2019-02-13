@@ -19,12 +19,6 @@
     text-decoration: underline;
 }
 
-a:active,
-a:hover {
-outline: 0;
-}
-
-
 b,
 strong {
 font-weight: bold;
