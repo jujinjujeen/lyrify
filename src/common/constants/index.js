@@ -6,4 +6,4 @@ export const STATES = {
     EMPTY: 'empty'
 }
 
-epoxrt const APP_NAME = 'Lyrify';
+export const APP_NAME = 'Lyrify';

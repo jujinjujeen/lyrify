@@ -5,6 +5,8 @@ import {
   ipcMain
 } from 'electron';
 import isDev from 'electron-is-dev';
+import createMainWindow from './createMainWindow';
+import createTray from './createTray';
 
 global.isDev = isDev;
 

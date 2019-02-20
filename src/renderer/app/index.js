@@ -5,7 +5,7 @@ import {SpotifyApplicationClient as spotify} from 'spotify-application-client';
 import Song from './components/Song';
 import Lyrics from './components/Lyrics';
 import { get } from 'common/services/api';
-import { STATES, API_KEY } from 'common/constants';
+import { STATES } from 'common/constants';
 import './main.css';
 
 let interval;
@@ -29,7 +29,7 @@ class App extends Component {
     try{
         console.log('searching for lyrics')
         this.setState({ lyricsState: STATES.LOADING });
-        const { result } = await get(`/${artist}/${track}?apikey=${API_KEY}`)
+        const { result } = await get(`/${artist}/${track}?apikey=${process.env.API_KEY}`)
         const lyrics = result.track.text;
         if(lyrics) {
             this.setState({ lyrics, lyricsState: STATES.LOADED });
