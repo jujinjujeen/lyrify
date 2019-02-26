@@ -1,0 +1,34 @@
+{
+  "name": "lyrify",
+  "version": "0.0.1",
+  "license": "MIT",
+  "build": {
+    "appId": "com.lyrify.app",
+    "mac": {
+      "category": "public.app-category.music"
+    }
+  },
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "electron-is-dev": "^1.0.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "source-map-support": "^0.5.9",
+    "spotify-application-client": "^1.0.5"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "electron": "3.0.10",
+    "electron-builder": "^20.36.2",
+    "electron-webpack": "^2.6.1",
+    "webpack": "^4.26.0"
+  }
+}

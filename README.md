@@ -1,2 +1,3 @@
-# lyrify
-MacOS tray app for exploring lyrics of currently playing Spotify song
+# Lyrify
+
+> Mac tray app for spotify lyrics
