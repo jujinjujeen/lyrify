@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://orion.apiseeds.com/api/music/lyric'
+    baseURL: process.env.BACK_URL
 });
 
 const request = (method, url, params) => {

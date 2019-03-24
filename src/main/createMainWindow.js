@@ -14,7 +14,8 @@ const config = {
     webPreferences: {
         // Prevents renderer process code from not running when window is
         // hidden
-        backgroundThrottling: false
+        backgroundThrottling: false,
+        webSecurity: false,
     }
 };
 

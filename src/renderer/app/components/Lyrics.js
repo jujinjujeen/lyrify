@@ -22,7 +22,8 @@ const getText = (lyrics, state) => {
 
 const Lyrics = ({lyrics, state}) => {
     return (
-        <div>
+        <div
+            className='selectable-text'>
             {getText(lyrics, state)}
         </div>
     )
