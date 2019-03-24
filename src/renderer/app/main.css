@@ -16,287 +16,290 @@
     text-decoration: underline;
 }
 
-b,
-strong {
-font-weight: bold;
+b, strong {
+    font-weight: bold;
 }
 
 * {
-cursor: default;
--webkit-user-drag: text;
--webkit-user-select: none;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-padding: 0;
-margin: 0;
+    cursor: default;
+    -webkit-user-drag: text;
+    -webkit-user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
-height: 100%;
-width: 100%;
-overflow: hidden;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 body {
-height: 100%;
-padding: 0;
-margin: 0;
-font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
-font-size: 13px;
-line-height: 1.6;
-color: #333;
-background-color: transparent;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+    background-color: transparent;
 }
 
 hr {
-margin: 15px 0;
-overflow: hidden;
-background: transparent;
-border: 0;
-border-bottom: 1px solid #ddd;
+    margin: 15px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #ddd;
 }
 
 h1, h2, h3, h4, h5, h6 {
-margin-top: 20px;
-margin-bottom: 10px;
-font-weight: 500;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 h1 {
-font-size: 36px;
+    font-size: 36px;
 }
 
 h2 {
-font-size: 30px;
+    font-size: 30px;
 }
 
 h3 {
-font-size: 24px;
+    font-size: 24px;
 }
 
 h4 {
-font-size: 18px;
+    font-size: 18px;
 }
 
 h5 {
-font-size: 14px;
+    font-size: 14px;
 }
 
 h6 {
-font-size: 12px;
+    font-size: 12px;
 }
 
 .window {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-display: flex;
-flex-direction: column;
-background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
 }
 
 .window-content {
-position: relative;
-overflow-y: auto;
-display: flex;
-flex: 1;
+    position: relative;
+    overflow-y: auto;
+    display: flex;
+    flex: 1;
 }
 
-.selectable-text {
-cursor: text;
--webkit-user-select: text;
+.selectable-text, .selectable-text * {
+    cursor: text;
+    -webkit-user-select: text;
+    user-select: text;
 }
 
 .text-center {
-text-align: center;
+    text-align: center;
 }
 
 .text-right {
-text-align: right;
+    text-align: right;
 }
 
 .text-left {
-text-align: left;
+    text-align: left;
 }
 
-
 .padded {
-padding: 10px;
+    padding: 10px;
 }
 
 .padded-less {
-padding: 5px;
+    padding: 5px;
 }
 
 .padded-more {
-padding: 20px;
+    padding: 20px;
 }
 
 .padded-vertically {
-padding-top: 10px;
-padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .padded-vertically-less {
-padding-top: 5px;
-padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .padded-vertically-more {
-padding-top: 20px;
-padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .padded-horizontally {
-padding-right: 10px;
-padding-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .padded-horizontally-less {
-padding-right: 5px;
-padding-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 .padded-horizontally-more {
-padding-right: 20px;
-padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .padded-top {
-padding-top: 10px;
+    padding-top: 10px;
 }
 
 .padded-top-less {
-padding-top: 5px;
+    padding-top: 5px;
 }
 
 .padded-top-more {
-padding-top: 20px;
+    padding-top: 20px;
 }
 
 .padded-bottom {
-padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .padded-bottom-less {
-padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .padded-bottom-more {
-padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .btn {
-display: inline-block;
-padding: 3px 8px;
-margin-bottom: 0;
-font-size: 12px;
-line-height: 1.4;
-text-align: center;
-white-space: nowrap;
-vertical-align: middle;
-cursor: default;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
--webkit-app-region: no-drag;
+    display: inline-block;
+    padding: 3px 8px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: default;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+    -webkit-app-region: no-drag;
 }
+
 .btn:focus {
-outline: none;
-box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .toolbar {
-min-height: 22px;
-box-shadow: inset 0 1px 0 #f5f4f5;
-background-color: #e8e6e8;
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e6e8), color-stop(100%, #d1cfd1));
-background-image: -webkit-linear-gradient(top, #e8e6e8 0%, #d1cfd1 100%);
-background-image: linear-gradient(to bottom, #e8e6e8 0%, #d1cfd1 100%);
+    min-height: 22px;
+    box-shadow: inset 0 1px 0 #f5f4f5;
+    background-color: #e8e6e8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e6e8), color-stop(100%, #d1cfd1));
+    background-image: -webkit-linear-gradient(top, #e8e6e8 0%, #d1cfd1 100%);
+    background-image: linear-gradient(to bottom, #e8e6e8 0%, #d1cfd1 100%);
 }
+
 .toolbar:before, .toolbar:after {
-display: table;
-content: " ";
+    display: table;
+    content: " ";
 }
+
 .toolbar:after {
-clear: both;
+    clear: both;
 }
 
 .toolbar-header {
-border-bottom: 1px solid #c2c0c2;
+    border-bottom: 1px solid #c2c0c2;
 }
+
 .toolbar-header .title {
-margin-top: 1px;
+    margin-top: 1px;
 }
 
 .toolbar-footer {
-border-top: 1px solid #c2c0c2;
--webkit-app-region: drag;
+    border-top: 1px solid #c2c0c2;
+    -webkit-app-region: drag;
 }
 
 .title {
-margin: 0;
-font-size: 12px;
-font-weight: 400;
-text-align: center;
-color: #555;
-cursor: default;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #555;
+    cursor: default;
 }
 
 .toolbar-borderless {
-border-top: 0;
-border-bottom: 0;
+    border-top: 0;
+    border-bottom: 0;
 }
-
 
 textarea {
-height: auto;
+    height: auto;
 }
 
-
 .pane-group {
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
 }
 
 .pane {
-position: relative;
-overflow-y: auto;
-flex: 1;
-border-left: 1px solid #ddd;
+    position: relative;
+    overflow-y: auto;
+    flex: 1;
+    border-left: 1px solid #ddd;
 }
+
 .pane-content {
     padding: 10px 20px;
 }
+
 .pane:first-child {
-border-left: 0;
+    border-left: 0;
 }
 
 .pane-sm {
-max-width: 220px;
-min-width: 150px;
+    max-width: 220px;
+    min-width: 150px;
 }
 
 .pane-mini {
-width: 80px;
-flex: none;
+    width: 80px;
+    flex: none;
 }
 
 .pane-one-fourth {
-width: 25%;
-flex: none;
+    width: 25%;
+    flex: none;
 }
 
 .pane-one-third {
-width: 33.3%;
+    width: 33.3%;
 }
