@@ -30,7 +30,7 @@ const getLabel = (song, state) => {
 const Song = ({song, state}) => {
 
     return (
-        <p className='padded-bottom'>
+        <p className='padded-bottom selectable-text'>
             {
                 getLabel(song, state)
             }
