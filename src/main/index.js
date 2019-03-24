@@ -7,8 +7,10 @@ import {
 import isDev from 'electron-is-dev';
 import createMainWindow from './createMainWindow';
 import createTray from './createTray';
+import contextMenu from 'electron-context-menu';
 
 global.isDev = isDev;
+contextMenu();
 
 let mainWindow;
 let tray;
