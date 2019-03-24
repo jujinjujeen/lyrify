@@ -1,6 +1,7 @@
 import { BrowserWindow } from 'electron';
 import * as path from 'path';
 import { format as formatUrl } from 'url';
+import { close } from './helpers';
 
 const config = {
     width: 300,
@@ -45,7 +46,7 @@ const createMainWindow = () => {
 
     window.on('blur', () => {
         if (!window.webContents.isDevToolsOpened()) {
-            close();
+            close(window);
         }
     })
 

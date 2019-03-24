@@ -16,14 +16,14 @@ const createTray = (mainWindow) => {
     tray.setToolTip(process.env.APP_NAME);
     tray.on('right-click', toggleWindow);
     tray.on('double-click', toggleWindow);
-    tray.on('click', (event) => {
+    tray.on('click', function (event) {
         toggleWindow();
 
         // Show devtools when command clicked
         if (global.isDev) {
             mainWindow.openDevTools({ mode: 'detach' });
         }
-    })
+    });
 
     return tray;
 }
