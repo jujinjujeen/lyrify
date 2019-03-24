@@ -36,10 +36,6 @@ const createMainWindow = () => {
         }));
     }
 
-    window.on('closed', () => {
-        mainWindow = null;
-    })
-
     window.webContents.on('devtools-opened', () => {
         window.focus();
         setImmediate(() => {
