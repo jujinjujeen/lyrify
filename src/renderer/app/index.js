@@ -4,7 +4,7 @@ import axios from 'axios';
 import {SpotifyApplicationClient as spotify} from 'spotify-application-client';
 import Song from './components/Song';
 import Lyrics from './components/Lyrics';
-import { get } from 'common/services/api';
+import { getLyrics } from 'common/services/lyrics';
 import { STATES } from 'common/constants';
 import './main.css';
 
@@ -29,8 +29,8 @@ class App extends Component {
     try{
         console.log('searching for lyrics')
         this.setState({ lyricsState: STATES.LOADING });
-        const { result } = await get(`/${artist}/${track}?apikey=${process.env.API_KEY}`)
-        const lyrics = result.track.text;
+        const lyrics = await getLyrics(artist, track);
+
         if(lyrics) {
             this.setState({ lyrics, lyricsState: STATES.LOADED });
         } else {
