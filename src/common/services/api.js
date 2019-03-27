@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: process.env.BACK_URL
+    baseURL: process.env.ELECTRON_WEBPACK_APP_BACK_URL
 });
 
 const request = (method, url, params) => {
