@@ -1,6 +1,6 @@
 {
   "name": "lyrify",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "build": {
     "appId": "com.lyrify.app",
@@ -9,15 +9,15 @@
     }
   },
   "scripts": {
-    "dev": "electron-webpack dev",
-    "compile": "electron-webpack",
-    "dist": "yarn compile && electron-builder",
+    "dev": "dotenv electron-webpack dev",
+    "compile": "dotenv electron-webpack",
+    "dist": "dotenv yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "axios": "^0.18.0",
-    "dotenv": "^6.2.0",
+    "dotenv-cli": "^2.0.0",
     "electron-context-menu": "^0.11.0",
     "electron-is-dev": "^1.0.1",
     "react": "^16.6.3",

@@ -1,8 +1,8 @@
 'use strict'
-require('dotenv').config();
 import {
   app,
-  ipcMain
+  ipcMain,
+  dialog
 } from 'electron';
 import isDev from 'electron-is-dev';
 import createMainWindow from './createMainWindow';
@@ -19,6 +19,10 @@ let tray;
 app.on('ready', () => {
   mainWindow = createMainWindow();
   tray = createTray(mainWindow);
+
+  mainWindow.on('closed', () => {
+    mainWindow = null;
+  })
 });
 
 // quit application when all windows are closed

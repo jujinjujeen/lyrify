@@ -1,6 +1,7 @@
 import { BrowserWindow } from 'electron';
 import * as path from 'path';
 import { format as formatUrl } from 'url';
+import { close } from './helpers';
 
 const config = {
     width: 300,
@@ -10,7 +11,7 @@ const config = {
     fullscreenable: false,
     resizable: false,
     transparent: true,
-    title: process.env.APP_NAME,
+    title: process.env.ELECTRON_WEBPACK_APP_APP_NAME,
     webPreferences: {
         // Prevents renderer process code from not running when window is
         // hidden
@@ -18,8 +19,6 @@ const config = {
         webSecurity: false,
     }
 };
-
-
 
 const createMainWindow = () => {
     const window = new BrowserWindow(config);
@@ -36,10 +35,6 @@ const createMainWindow = () => {
         }));
     }
 
-    window.on('closed', () => {
-        mainWindow = null;
-    })
-
     window.webContents.on('devtools-opened', () => {
         window.focus();
         setImmediate(() => {
@@ -49,7 +44,7 @@ const createMainWindow = () => {
 
     window.on('blur', () => {
         if (!window.webContents.isDevToolsOpened()) {
-            close();
+            close(window);
         }
     })
 

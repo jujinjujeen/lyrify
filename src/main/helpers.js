@@ -18,7 +18,7 @@ const showWindow = (mainWindow, tray) => {
     mainWindow.focus();
 }
 
-const close = (mainWindow) => {
+export const close = (mainWindow) => {
     mainWindow.webContents.send('close');
     mainWindow.hide();
 }
