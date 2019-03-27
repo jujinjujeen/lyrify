@@ -1,8 +1,8 @@
 'use strict'
-require('dotenv').config();
 import {
   app,
-  ipcMain
+  ipcMain,
+  dialog
 } from 'electron';
 import isDev from 'electron-is-dev';
 import createMainWindow from './createMainWindow';
@@ -17,8 +17,28 @@ let tray;
 //https://github.com/davicorreiajr/spotify-now-playing/blob/master/src/index.js
 
 app.on('ready', () => {
-  mainWindow = createMainWindow();
-  tray = createTray(mainWindow);
+  try {
+    mainWindow = createMainWindow();
+    tray = createTray(mainWindow);
+  } catch (e) {
+    console.log(e);
+
+    dialog.showMessageBox(
+      mainWindow,
+      {
+        type: 'error',
+        buttons: ['OK'],
+        title: 'Error',
+        message: JSON.stringify(e)
+      },
+      () => {
+        mainWindow = null;
+        tray = null;
+        app.quit();
+      }
+    );
+
+  }
 
   mainWindow.on('closed', () => {
     mainWindow = null;

@@ -11,7 +11,7 @@ const config = {
     fullscreenable: false,
     resizable: false,
     transparent: true,
-    title: process.env.APP_NAME,
+    title: process.env.ELECTRON_WEBPACK_APP_APP_NAME,
     webPreferences: {
         // Prevents renderer process code from not running when window is
         // hidden
@@ -19,8 +19,6 @@ const config = {
         webSecurity: false,
     }
 };
-
-
 
 const createMainWindow = () => {
     const window = new BrowserWindow(config);
