@@ -13,7 +13,7 @@ const createTray = (mainWindow) => {
     const toggleWindow = () => {
         toggleWindowHelper(mainWindow, tray)
     };
-    tray.setToolTip(process.env.APP_NAME);
+    tray.setToolTip(process.env.ELECTRON_WEBPACK_APP_APP_NAME);
     tray.on('right-click', toggleWindow);
     tray.on('double-click', toggleWindow);
     tray.on('click', function (event) {
