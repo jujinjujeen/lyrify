@@ -5,7 +5,7 @@ import {
 import * as path from 'path';
 import { toggleWindowHelper } from './helpers';
 
-const iconPath = path.join(__static, 'lyrify16.png');
+const iconPath = path.join(__static, 'lyrifyTemplate.png');
 
 const createTray = (mainWindow) => {
     let nimage = nativeImage.createFromPath(iconPath);
