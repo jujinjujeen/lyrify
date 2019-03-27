@@ -17,28 +17,8 @@ let tray;
 //https://github.com/davicorreiajr/spotify-now-playing/blob/master/src/index.js
 
 app.on('ready', () => {
-  try {
-    mainWindow = createMainWindow();
-    tray = createTray(mainWindow);
-  } catch (e) {
-    console.log(e);
-
-    dialog.showMessageBox(
-      mainWindow,
-      {
-        type: 'error',
-        buttons: ['OK'],
-        title: 'Error',
-        message: JSON.stringify(e)
-      },
-      () => {
-        mainWindow = null;
-        tray = null;
-        app.quit();
-      }
-    );
-
-  }
+  mainWindow = createMainWindow();
+  tray = createTray(mainWindow);
 
   mainWindow.on('closed', () => {
     mainWindow = null;
