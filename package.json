@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dotenv-cli": "^2.0.0",
     "electron-context-menu": "^0.11.0",
     "electron-is-dev": "^1.0.1",
